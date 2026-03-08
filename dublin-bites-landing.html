@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dublin Bites — Founding Members</title>
+  <meta name="description" content="Dublin's first food deals newsletter. Free weekly restaurant deals, hidden gems, and what's on — Founding Members get exclusive access forever.">
+  <!-- Open Graph (update og:image to real hosted photo before running ads) -->
+  <meta property="og:title" content="Dublin Bites — Founding Members">
+  <meta property="og:description" content="Dublin's first food deals newsletter. Free weekly. Founding Members get exclusive deals forever.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&h=628&fit=crop">
+  <meta property="og:url" content="https://dublinbites.ie">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <!-- Meta Pixel: Replace YOUR_PIXEL_ID_HERE with your Meta Pixel ID before running ads -->
+  <!--
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'YOUR_PIXEL_ID_HERE');
+  fbq('track', 'PageView');
+  </script>
+  -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; overflow: hidden; }
+    body { margin: 0; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 300; color: var(--text); background: var(--green); line-height: 1.5; }
+    :root {
+      --green:       #1A3C2E;
+      --green-mid:   #2D6A4F;
+      --green-light: #40916C;
+      --gold:        #C9A84C;
+      --gold-light:  #E8C97A;
+      --gold-dim:    rgba(201,168,76,0.15);
+      --cream:       #FAF6EE;
+      --cream-dark:  #F0E8D8;
+      --text:        #1A1A1A;
+      --muted:       #6B7B74;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--gold); }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+    /* Typography */
+    h1, h2, .font-playfair { font-family: 'Playfair Display', serif; }
+    h1 { font-size: clamp(36px, 4.2vw, 62px); font-weight: 900; line-height: 1.1; color: var(--cream); margin: 0 0 0.5rem 0; }
+    h2 { font-size: clamp(28px, 3.8vw, 44px); font-weight: 800; color: var(--text); margin: 0 0 1rem 0; }
+    .card-title { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--text); margin: 0 0 0.35rem 0; }
+    .counter-num { font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 900; color: var(--gold); }
+    .eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+    input, button { font-family: 'DM Sans', sans-serif; }
+    input { font-size: 14px; font-weight: 400; }
+    .btn-cta {
+      background: var(--gold);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 14px 22px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-cta:hover:not(:disabled) { background: var(--gold-light); }
+    .btn-cta:disabled { opacity: 0.8; cursor: not-allowed; }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: none; }
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-8px); }
+      to   { opacity: 1; transform: none; }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0.65; }
+    }
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal.visible:nth-child(1) { transition-delay: 0s; }
+    .reveal.visible:nth-child(2) { transition-delay: 0.05s; }
+    .reveal.visible:nth-child(3) { transition-delay: 0.1s; }
+    .reveal.visible:nth-child(4) { transition-delay: 0.15s; }
+    .reveal.visible:nth-child(5) { transition-delay: 0.2s; }
+    .reveal.visible:nth-child(6) { transition-delay: 0.25s; }
+    .new-entry { animation: slideIn 0.4s ease; }
+    .slide-in { animation: slideIn 0.4s ease; }
+    .pulse-num { animation: pulse 2s ease-in-out infinite; }
+
+    /* Section 1: Scarcity banner */
+    .banner {
+      background: var(--green);
+      color: var(--gold-light);
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      border-bottom: 1px solid var(--gold-dim);
+    }
+    .banner #spots-left { font-weight: 700; color: var(--gold); }
+    .banner .pulse-num { display: inline-block; }
+
+    /* Single-screen centered layout */
+    .wrapper { display: flex; flex-direction: column; min-height: 100vh; height: 100vh; }
+    .hero { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 1rem 1.5rem; }
+    .hero-content {
+      max-width: 520px; width: 100%; text-align: center;
+      background: var(--gold);
+      padding: 2rem 1.75rem;
+      border-radius: 12px;
+    }
+    .hero-content .form-inline { justify-content: center; }
+    .hero-content .form-inline input[type="email"] { min-width: 180px; background: var(--cream); color: var(--text); border-color: rgba(26,60,46,0.25); }
+    .hero-content .form-inline input[type="email"]::placeholder { color: var(--muted); }
+    .hero-content h1 { font-size: clamp(22px, 3.2vw, 34px); margin-bottom: 0.75rem; color: var(--green); }
+    .hero-content .perks-box { text-align: left; background: rgba(26,60,46,0.12); border-color: rgba(26,60,46,0.2); }
+    .hero-content .perks-box ul { color: var(--green); }
+    .hero-content .perks-box strong { color: var(--green) !important; }
+    .hero-content .progress-block { text-align: center; }
+    .hero-content .proof-oneline { color: var(--green); }
+    .hero-content .progress-block .eyebrow { color: var(--green); }
+    .hero-content .counter-num { color: var(--green); }
+    .hero-content .progress-bar-wrap { background: rgba(26,60,46,0.2); }
+    .hero-content .progress-bar-fill { background: linear-gradient(90deg, var(--green-mid), var(--green-light)); }
+    .hero-content .success-state.show { color: var(--green); }
+    .hero-content .badge { border-color: var(--green); color: var(--green); }
+    .hero-content .btn-cta { background: var(--green); color: var(--cream); }
+    .hero-content .btn-cta:hover:not(:disabled) { background: var(--green-mid); color: var(--cream); }
+
+    .badge { display: inline-block; padding: 6px 14px; border: 1px solid var(--gold); color: var(--gold); font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.75rem; border-radius: 999px; }
+    .perks-box { background: var(--gold-dim); border: 1px solid var(--gold-dim); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; }
+    .perks-box ul { margin: 0; padding: 0 0 0 1.2rem; color: var(--cream); font-size: 14px; }
+    .perks-box li { margin-bottom: 0.35rem; }
+    .perks-box li:last-child { margin-bottom: 0; }
+
+    .form-inline { display: flex; gap: 0; flex-wrap: wrap; margin-bottom: 1rem; }
+    .form-inline input[type="email"] { flex: 1; min-width: 200px; padding: 14px 16px; border: 2px solid var(--gold-dim); background: rgba(255,255,255,0.08); color: var(--cream); border-radius: 0; font-size: 14px; }
+    .form-inline input[type="email"]::placeholder { color: var(--muted); }
+    .form-inline input[type="email"]:focus { outline: none; border-color: var(--gold); }
+    .form-inline input[type="email"].input-error { border-color: #c44; }
+    .form-inline .btn-cta { border-radius: 0; }
+    .success-state { display: none; padding: 1rem 0; color: var(--green-light); font-weight: 500; }
+    .success-state.show { display: block; }
+
+    .proof-oneline { margin-bottom: 1rem; font-size: 14px; color: var(--cream); opacity: 0.9; }
+
+    .progress-block { margin-top: 0.5rem; }
+    .progress-block .eyebrow { margin-bottom: 0.25rem; }
+    .progress-bar-wrap { height: 8px; background: rgba(255,255,255,0.1); margin-top: 0.5rem; overflow: hidden; }
+    .progress-bar-fill { height: 100%; background: linear-gradient(90deg, var(--gold), var(--gold-light)); transition: width 0.3s ease; width: 0%; }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="banner">
+      Founding Member spots are limited. First 100 lock in status — forever. <span class="pulse-num" id="spots-left">453</span> left.
+    </div>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="badge">Founding Member</span>
+        <h1>100 spots. Then the door closes on Dublin's best food deals.</h1>
+        <form id="hero-form" name="founding-member" class="form-inline" method="POST" data-netlify="true" onsubmit="return handleSubscribe(event, 'hero-email', 'hero-form', 'hero-success');">
+          <input type="hidden" name="form-name" value="founding-member">
+          <input type="email" id="hero-email" name="email" placeholder="you@example.com" required aria-label="Email address">
+          <button type="submit" id="hero-submit" class="btn-cta">Claim my spot →</button>
+        </form>
+        <div id="hero-success" class="success-state">You're in. Founding Member status confirmed.</div>
+        <div class="perks-box">
+          <strong style="color: var(--gold); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em;">What you get as a Founding Member</strong>
+          <ul>
+            <li>Priority deal access — 24 hours before everyone else</li>
+            <li>Free or discounted entry — to Dublin Bites partner events</li>
+            <li>New openings first — be first to hear about new spots and their deals</li>
+          </ul>
+        </div>
+        <div id="new-member-message" class="proof-oneline" aria-live="polite"></div>
+        <div class="progress-block">
+          <div class="eyebrow">Founding Members</div>
+          <div class="counter-num" id="subscriber-count">47</div>
+          <div class="progress-bar-wrap"><div class="progress-bar-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Config
+    const FOUNDING_CAP = 100;
+    const SEED_COUNT = 3;
+    let totalCount = SEED_COUNT;
+    let sessionNew = parseInt(sessionStorage.getItem('dublinbites_session_new') || '0', 10);
+
+    function updateUI() {
+      const spotsLeft = Math.max(0, FOUNDING_CAP - totalCount);
+      const elSpots = document.getElementById('spots-left');
+      const elCount = document.getElementById('subscriber-count');
+      const elFill = document.getElementById('progress-fill');
+      const elMsg = document.getElementById('new-member-message');
+      if (elSpots) elSpots.textContent = spotsLeft;
+      if (elCount) elCount.textContent = totalCount;
+      if (elFill) {
+        const pct = Math.min(100, (totalCount / FOUNDING_CAP) * 100);
+        elFill.style.width = pct + '%';
+      }
+      if (elMsg) {
+        if (sessionNew === 0) {
+          elMsg.textContent = 'Join ' + totalCount + ' founding members';
+        } else if (sessionNew === 1) {
+          elMsg.textContent = '+1 new founding member subscribed';
+        } else {
+          elMsg.textContent = '+' + sessionNew + ' new founding members subscribed';
+        }
+      }
+    }
+
+    async function handleSubscribe(event, inputId, formId, successId) {
+      event.preventDefault();
+      const input = document.getElementById(inputId);
+      const form = document.getElementById(formId);
+      const successEl = document.getElementById(successId);
+      const btn = form.querySelector('button[type="submit"]');
+      const email = (input && input.value) ? input.value.trim() : '';
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email || !re.test(email)) {
+        input.classList.add('input-error');
+        setTimeout(function() { input.classList.remove('input-error'); }, 2000);
+        return false;
+      }
+      if (btn) { btn.textContent = 'Claiming…'; btn.disabled = true; }
+      try {
+        const formData = new FormData(form);
+        formData.append('form-name', 'founding-member');
+        const res = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(formData).toString(),
+        });
+        if (res.ok || res.status === 302) {
+          if (typeof fbq === 'function') fbq('track', 'Lead');
+          if (form) form.style.display = 'none';
+          if (successEl) { successEl.classList.add('show'); successEl.style.display = 'block'; }
+          sessionNew += 1;
+          totalCount += 1;
+          sessionStorage.setItem('dublinbites_session_new', String(sessionNew));
+          updateUI();
+        } else {
+          if (btn) { btn.textContent = 'Try again'; btn.disabled = false; }
+          if (input) input.classList.add('input-error');
+          setTimeout(function() { if (input) input.classList.remove('input-error'); }, 2000);
+        }
+      } catch (e) {
+        if (btn) { btn.textContent = 'Try again'; btn.disabled = false; }
+        if (input) input.classList.add('input-error');
+        setTimeout(function() { if (input) input.classList.remove('input-error'); }, 2000);
+      }
+      return false;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      totalCount = SEED_COUNT + sessionNew;
+      updateUI();
+    });
+  </script>
+</body>
+</html>

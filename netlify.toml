@@ -1,0 +1,11 @@
+# Netlify configuration for Dublin Bites landing
+# Deploy the root directory; publish the HTML (or set publish = "." and add redirect for / to dublin-bites-landing.html if needed)
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# Serve the landing page at / so form POST to / works and visitors see the page at the root
+[[redirects]]
+  from = "/"
+  to = "/dublin-bites-landing.html"
+  status = 200
