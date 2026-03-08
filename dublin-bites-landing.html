@@ -205,6 +205,18 @@
     let totalCount = SEED_COUNT;
     let sessionNew = parseInt(sessionStorage.getItem('dublinbites_session_new') || '0', 10);
 
+    async function fetchFoundingCount() {
+      try {
+        const res = await fetch('/.netlify/functions/founding-count');
+        if (!res.ok) return;
+        const data = await res.json();
+        if (typeof data.count === 'number') {
+          totalCount = data.count;
+          updateUI();
+        }
+      } catch (_) {}
+    }
+
     function updateUI() {
       const spotsLeft = Math.max(0, FOUNDING_CAP - totalCount);
       const elSpots = document.getElementById('spots-left');
@@ -258,6 +270,7 @@
           totalCount += 1;
           sessionStorage.setItem('dublinbites_session_new', String(sessionNew));
           updateUI();
+          setTimeout(fetchFoundingCount, 2000);
         } else {
           if (btn) { btn.textContent = 'Try again'; btn.disabled = false; }
           if (input) input.classList.add('input-error');
@@ -274,6 +287,7 @@
     document.addEventListener('DOMContentLoaded', function() {
       totalCount = SEED_COUNT + sessionNew;
       updateUI();
+      fetchFoundingCount();
     });
   </script>
 </body>
