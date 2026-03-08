@@ -149,6 +149,7 @@
     .form-inline input[type="email"]:focus { outline: none; border-color: var(--gold); }
     .form-inline input[type="email"].input-error { border-color: #c44; }
     .form-inline .btn-cta { border-radius: 0; }
+    .form-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
     .success-state { display: none; padding: 1rem 0; color: var(--green-light); font-weight: 500; }
     .success-state.show { display: block; }
 
@@ -170,8 +171,11 @@
       <div class="hero-content">
         <span class="badge">Founding Member</span>
         <h1>100 spots. Then the door closes on Dublin's best food deals.</h1>
-        <form id="hero-form" name="founding-member" class="form-inline" method="POST" data-netlify="true" onsubmit="return handleSubscribe(event, 'hero-email', 'hero-form', 'hero-success');">
+        <form id="hero-form" name="founding-member" class="form-inline" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return handleSubscribe(event, 'hero-email', 'hero-form', 'hero-success');">
           <input type="hidden" name="form-name" value="founding-member">
+          <p class="form-hp" aria-hidden="true">
+            <label>Don't fill this out if you're human: <input name="bot-field" type="text" tabindex="-1" autocomplete="off" /></label>
+          </p>
           <input type="email" id="hero-email" name="email" placeholder="you@example.com" required aria-label="Email address">
           <button type="submit" id="hero-submit" class="btn-cta">Claim my spot →</button>
         </form>
