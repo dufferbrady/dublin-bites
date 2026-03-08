@@ -2,6 +2,9 @@
   "name": "dublin-bites-landing",
   "private": true,
   "description": "Dublin Bites founding member landing page",
+  "engines": {
+    "node": ">=20.12.2"
+  },
   "scripts": {
     "dev": "netlify dev"
   },
