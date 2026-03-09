@@ -19,7 +19,8 @@ exports.handler = async function (event) {
 
   try {
     const { neon } = await import("@netlify/neon");
-    const sql = neon();
+    const connectionString = process.env.NETLIFY_DATABASE_URL || process.env.DATABASE_URL;
+    const sql = connectionString ? neon(connectionString) : neon();
     await sql`INSERT INTO founding_member_submissions (email) VALUES (${email})`;
   } catch (err) {
     console.error("submission-created: DB insert failed", err);

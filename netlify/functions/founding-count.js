@@ -6,7 +6,8 @@
 exports.handler = async function () {
   try {
     const { neon } = await import("@netlify/neon");
-    const sql = neon();
+    const connectionString = process.env.NETLIFY_DATABASE_URL || process.env.DATABASE_URL;
+    const sql = connectionString ? neon(connectionString) : neon();
     const rows = await sql`SELECT COUNT(*) AS count FROM founding_member_submissions`;
     const count = rows && rows[0] && rows[0].count != null
       ? parseInt(rows[0].count, 10)
