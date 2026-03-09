@@ -12,17 +12,17 @@ exports.handler = async function (event) {
   } catch (_) {
     return { statusCode: 200 };
   }
-  if (!payload || !payload.data) return { statusCode: 200 };
+  if (!payload) return { statusCode: 200 };
 
-  const email = payload.data.email;
+  const email = (payload.data && payload.data.email) || payload.email;
   if (!email || typeof email !== "string") return { statusCode: 200 };
 
   try {
     const { neon } = await import("@netlify/neon");
     const sql = neon();
     await sql`INSERT INTO founding_member_submissions (email) VALUES (${email})`;
-  } catch (_) {
-    // No DB, or table missing, or env not set — form still works; don't fail the trigger
+  } catch (err) {
+    console.error("submission-created: DB insert failed", err);
   }
   return { statusCode: 200 };
 };
