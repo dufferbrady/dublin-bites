@@ -14,7 +14,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <!-- Meta Pixel: Replace YOUR_PIXEL_ID_HERE with your Meta Pixel ID before running ads -->
-  <!--
   <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -27,7 +26,6 @@
   fbq('init', 'YOUR_PIXEL_ID_HERE');
   fbq('track', 'PageView');
   </script>
-  -->
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     html, body { min-height: 100%; }
@@ -52,6 +50,7 @@
     h1, h2, .font-playfair { font-family: 'Playfair Display', serif; }
     h1 { font-size: clamp(36px, 4.2vw, 62px); font-weight: 900; line-height: 1.1; color: var(--cream); margin: 0 0 0.5rem 0; }
     h2 { font-size: clamp(28px, 3.8vw, 44px); font-weight: 800; color: var(--text); margin: 0 0 1rem 0; }
+    .hero-subtitle { font-size: 14px; color: var(--green); margin: 0 0 1rem 0; }
     .card-title { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--text); margin: 0 0 0.35rem 0; }
     .counter-num { font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 900; color: var(--gold); }
     .eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
@@ -173,14 +172,15 @@
     <section class="hero">
       <div class="hero-content">
         <span class="badge">Founding Member</span>
-        <h1>100 spots. Then the door closes on Dublin's best food deals.</h1>
+        <h1>One weekly email that decides where you eat.</h1>
+        <p class="hero-subtitle">Dublin Bites sends one free email with the best restaurant offers, hidden gems and what’s on in the city. Founding Members see each week’s deals before everyone else.</p>
         <form id="hero-form" name="founding-member" class="form-inline" method="POST" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="founding-member">
           <p class="form-hp" aria-hidden="true">
             <label>Don't fill this out if you're human: <input name="bot-field" type="text" tabindex="-1" autocomplete="off" /></label>
           </p>
           <input type="email" id="hero-email" name="email" placeholder="you@example.com" required aria-label="Email address">
-          <button type="submit" id="hero-submit" class="btn-cta">Claim my spot →</button>
+          <button type="submit" id="hero-submit" class="btn-cta">Get my food deals →</button>
         </form>
         <p class="form-disclaimer">
           We’ll use your email to send you Dublin Bites food deals and related updates. You can unsubscribe at any time.
@@ -190,9 +190,9 @@
         <div class="perks-box">
           <strong style="color: var(--gold); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em;">What you get as a Founding Member</strong>
           <ul>
-            <li>Priority deal access — 24 hours before everyone else</li>
-            <li>Free or discounted entry — to Dublin Bites partner events</li>
-            <li>New openings first — be first to hear about new spots and their deals</li>
+            <li>Be first in line for the best restaurant deals each week.</li>
+            <li>Get free or discounted tickets to food events around Dublin.</li>
+            <li>Hear about new openings and launch offers before they hit your feed.</li>
           </ul>
         </div>
         <div id="new-member-message" class="proof-oneline" aria-live="polite"></div>
